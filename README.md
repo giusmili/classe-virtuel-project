@@ -22,7 +22,7 @@ Puis ouvrir `http://localhost:8000/index.html`.
 
 ```
 classe-virtuelle/   
-├──📄 index.html       
+├──📄index.html       
 ├──📄dashboard.html    
 ├──📄classe.html      
 ├──📁css/              
