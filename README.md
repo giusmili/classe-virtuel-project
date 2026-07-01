@@ -4,9 +4,9 @@ Prototype front-end statique (HTML/CSS) d'une plateforme de classes virtuelles :
 
 ## Aperçu
 
-- **`index.html`** :  Écran de connexion.
-- **`dashboard.html`** :  Tableau de bord administrateur (statistiques, planning, classes en direct).
-- **`classe.html`** :  Salle de classe virtuelle (vidéo, participants, chat).
+- **`index.html`** Écran de connexion.
+- **`dashboard.html`** Tableau de bord administrateur (statistiques, planning, classes en direct).
+- **`classe.html`** Salle de classe virtuelle (vidéo, participants, chat).
 
 Aucune installation requise : il s'agit de pages HTML statiques avec une unique feuille de style, sans build ni backend.
 
