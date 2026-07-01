@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classroom — Classe virtuelle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-classe">
+
+  <!-- Header -->
+  <header class="class-header">
+    <div style="display:flex;align-items:center;gap:11px">
+      <span class="rec-badge"><span class="rec-dot" aria-hidden="true"></span>REC</span>
+      <span class="timer">00:45:12</span>
+    </div>
+    <div class="divider" aria-hidden="true"></div>
+    <div>
+      <h1 class="class-info-title">Mathématiques — Terminale S</h1>
+      <div class="class-info-sub">M. Dupont · Chapitre : Les intégrales</div>
+    </div>
+    <div class="spacer" aria-hidden="true"></div>
+    <div class="connected-count">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="9" cy="8" r="3.2" stroke="#2ecc71" stroke-width="1.8"/>
+        <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="#2ecc71" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span style="color:#2ecc71">28</span> connectés
+    </div>
+  </header>
+
+  <!-- Body -->
+  <div class="class-body">
+
+    <!-- Video area -->
+    <main class="video-area">
+      <!-- Presenter -->
+      <div class="presenter">
+        <div class="presenter-avatar">MD</div>
+        <div class="presenter-tag">
+          <span class="online-dot" aria-hidden="true"></span>
+          Présentateur
+        </div>
+        <div class="presenter-name">M. Dupont</div>
+        <div class="screen-share">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 5h16v11H4z" stroke="#fff" stroke-width="1.8"/>
+            <path d="M9 20h6M12 16v4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          Partage d'écran
+        </div>
+      </div>
+
+      <!-- Student tiles -->
+      <ul class="student-tiles">
+        <li class="tile" style="background:linear-gradient(135deg,#3498db,#2980b9)">
+          <span class="tile-initials">LM</span>
+          <div class="tile-name">Lucas M.</div>
+          <div class="tile-mic" style="background:rgba(0,0,0,.4)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="9" y="3" width="6" height="11" rx="3" fill="#2ecc71"/>
+              <path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#2ecc71" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </li>
+
+        <li class="tile" style="background:linear-gradient(135deg,#2ecc71,#27ae60)">
+          <span class="tile-initials">EB</span>
+          <div class="tile-name">Emma B.</div>
+          <div class="tile-mic" style="background:rgba(231,76,60,.85)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 3.5A3 3 0 0 1 15 5v4M15 12.3a3 3 0 0 1-6-.3M4 4l16 16" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </li>
+
+        <li class="tile" style="background:linear-gradient(135deg,#8e5fd8,#7d3cc9)">
+          <span class="tile-initials">CR</span>
+          <div class="tile-name">Chloé R.</div>
+          <div class="tile-mic" style="background:rgba(0,0,0,.4)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="9" y="3" width="6" height="11" rx="3" fill="#2ecc71"/>
+              <path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#2ecc71" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </li>
+
+        <li class="tile" style="background:linear-gradient(135deg,#f39c12,#e67e22)">
+          <span class="tile-initials">NG</span>
+          <div class="tile-name">Noah G.</div>
+          <div class="tile-mic" style="background:rgba(243,156,18,.9)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v10M8 6l4-3 4 3" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 14v3a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </li>
+
+        <li class="tile tile-more">
+          <span class="tile-more-label">+24</span>
+          <span class="tile-more-sub">Autres</span>
+        </li>
+      </ul>
+    </main>
+
+    <!-- Right sidebar -->
+    <aside class="sidebar-right">
+      <div class="sidebar-tabs">
+        <div class="tab active">Participants <span style="color:#8fa0b3">28</span></div>
+        <div class="tab">Discussion</div>
+      </div>
+
+      <ul class="participants">
+        <li class="participant">
+          <div class="p-avatar" style="background:linear-gradient(135deg,#3498db,#2980b9)">LM</div>
+          <span class="p-name">Lucas Martin</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="9" y="3" width="6" height="11" rx="3" fill="#2ecc71"/>
+            <path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#2ecc71" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 5h16v11H4z" stroke="#7f8c9a" stroke-width="1.6"/>
+          </svg>
+        </li>
+
+        <li class="participant hand-raised">
+          <div class="p-avatar" style="background:linear-gradient(135deg,#f39c12,#e67e22)">NG</div>
+          <span class="p-name">Noah Garcia</span>
+          <span style="font:700 15px/1 'Matangi',sans-serif" role="img" aria-label="Main levée">✋</span>
+        </li>
+
+        <li class="participant">
+          <div class="p-avatar" style="background:linear-gradient(135deg,#2ecc71,#27ae60)">EB</div>
+          <span class="p-name">Emma Bernard</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 3.5A3 3 0 0 1 15 5v4M15 12.3a3 3 0 0 1-6-.3M4 4l16 16" stroke="#e74c3c" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </li>
+
+        <li class="participant">
+          <div class="p-avatar" style="background:linear-gradient(135deg,#8e5fd8,#7d3cc9)">CR</div>
+          <span class="p-name">Chloé Roux</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="9" y="3" width="6" height="11" rx="3" fill="#2ecc71"/>
+            <path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#2ecc71" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </li>
+      </ul>
+
+      <!-- Chat -->
+      <section class="chat-section">
+        <h2 class="chat-title">Discussion</h2>
+        <ul class="chat-messages">
+          <li>
+            <div class="chat-msg-author blue">Emma B.</div>
+            <div class="chat-bubble default">Monsieur, on peut revoir le calcul de la primitive ?</div>
+          </li>
+          <li>
+            <div class="chat-msg-author green">M. Dupont</div>
+            <div class="chat-bubble teacher">Bien sûr, je repartage l'écran. 👇</div>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <span class="chat-input-placeholder">Écrire un message…</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m4 12 16-7-7 16-2-7-7-2Z" fill="#3498db"/>
+          </svg>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <!-- Control bar -->
+  <div class="control-bar" role="toolbar" aria-label="Contrôles de la réunion">
+    <button class="ctrl-btn">
+      <span class="ctrl-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="9" y="3" width="6" height="11" rx="3" fill="#fff"/>
+          <path d="M6 11a6 6 0 0 0 12 0M12 17v4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="ctrl-label">Micro</span>
+    </button>
+
+    <button class="ctrl-btn">
+      <span class="ctrl-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="6" width="13" height="12" rx="2.5" fill="#fff"/>
+          <path d="m16 10 5-3v10l-5-3z" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="ctrl-label">Caméra</span>
+    </button>
+
+    <button class="ctrl-btn">
+      <span class="ctrl-icon active" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 5h16v11H4z" stroke="#3498db" stroke-width="1.8"/>
+          <path d="M9 20h6M12 16v4" stroke="#3498db" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="ctrl-label active">Partager</span>
+    </button>
+
+    <button class="ctrl-btn">
+      <span class="ctrl-icon" aria-hidden="true">✋</span>
+      <span class="ctrl-label">Main</span>
+    </button>
+
+    <button class="ctrl-btn">
+      <span class="ctrl-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <circle cx="9" cy="8" r="3" stroke="#fff" stroke-width="1.8"/>
+          <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="ctrl-label">Participants</span>
+    </button>
+
+    <button class="ctrl-btn">
+      <span class="ctrl-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+          <path d="M4 5h16v11H7l-3 3V5Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="ctrl-label">Discussion</span>
+    </button>
+
+    <div class="ctrl-divider" aria-hidden="true"></div>
+
+    <button class="btn-end" onclick="window.location.href='dashboard.html'">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M3 10c5-4 13-4 18 0v3l-4-1v-2c-3-1.5-7-1.5-10 0v2l-4 1v-3Z" fill="#fff"/>
+      </svg>
+      Terminer
+    </button>
+  </div>
+
+  <script>
+    // Live timer
+    let seconds = 45 * 60 + 12;
+    const timerEl = document.querySelector('.timer');
+    setInterval(() => {
+      seconds++;
+      const h = Math.floor(seconds / 3600);
+      const m = Math.floor((seconds % 3600) / 60);
+      const s = seconds % 60;
+      timerEl.textContent =
+        `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    }, 1000);
+  </script>
+</body>
+</html>
