@@ -25,6 +25,15 @@ classe-virtuelle/
 ├──📄classe.html
 ├──📁css/
 │   └──📄style.css
+├──📁favicon/
+│   ├──📄favicon.svg
+│   ├──📄favicon.ico
+│   ├──📄favicon-16x16.png
+│   ├──📄favicon-32x32.png
+│   ├──📄apple-touch-icon.png
+│   ├──📄android-chrome-192x192.png
+│   ├──📄android-chrome-512x512.png
+│   └──📄site.webmanifest
 ├──📄.gitignore
 ├──📄CLAUDE.md
 └──📄README.md
@@ -43,6 +52,7 @@ Styling conventions already in use:
 - Colors are hardcoded hex values repeated inline (e.g. `#3498db` blue, `#2ecc71` green, `#f39c12` orange, `#8e5fd8` purple, `#2c3e50` dark navy) — there are no CSS custom properties/variables defined, so match existing hex values rather than inventing new ones for the same semantic color (blue = math/primary, green = success/online, orange = pending/warning, purple = accent, red = live/recording/mic-off).
 - Many icons are inline hand-authored SVGs directly in the HTML rather than an icon font/library — follow the same pattern (viewBox="0 0 24 24", stroke-based) when adding new icons.
 - `.dist` is an empty placeholder directory; there is no actual build output.
+- `favicon/` holds the generated favicon set (SVG source + ICO/PNG sizes for browser tabs, Apple touch icon, Android/PWA icons) and `site.webmanifest`. It's built from the existing graduation-cap brand mark (`index.html`'s `.brand-logo-icon` SVG) on a `#2c3e50` background. All three pages link these assets from `<head>`; regenerate the PNGs/ICO from `favicon/favicon.svg` if the mark ever changes.
 
 ## Notes for this environment
 
