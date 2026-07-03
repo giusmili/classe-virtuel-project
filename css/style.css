@@ -189,7 +189,7 @@ body.page-login {
 
 .form-subtitle {
   font: 400 1.5rem/1.5 'Matangi', sans-serif;
-  color: #7f8c9a;
+  color: #475569;
   margin: 0 0 3rem;
 }
 
@@ -212,22 +212,29 @@ body.page-login {
   background: #f8fafc;
 }
 
-.form-field.active {
+.form-field:focus-within {
   border-color: #3498db;
   background: #fff;
   box-shadow: 0 0 0 0.4rem rgba(52,152,219,.12);
 }
 
-.form-field span {
+.form-field input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
   font: 400 1.5rem/1 'Matangi', sans-serif;
   color: #2c3e50;
 }
 
-.form-field .dots {
-  flex: 1;
+.form-field input[type="password"] {
   font: 600 1.7rem/1 'Matangi', sans-serif;
-  color: #2c3e50;
   letter-spacing: .18em;
+}
+
+.form-field input::placeholder {
+  color: #94a3b8;
 }
 
 .form-row {
@@ -242,18 +249,42 @@ body.page-login {
   align-items: center;
   gap: 0.9rem;
   font: 400 1.4rem/1 'Matangi', sans-serif;
-  color: #7f8c9a;
+  color: #475569;
   cursor: pointer;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
 }
 
 .checkbox-box {
   width: 1.8rem; height: 1.8rem;
   border-radius: 0.5rem;
-  background: #3498db;
+  background: #fff;
+  border: 0.15rem solid #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.checkbox-box svg { opacity: 0; transition: opacity .1s; }
+
+.checkbox-input:checked + .checkbox-box {
+  background: #3498db;
+  border-color: #3498db;
+}
+
+.checkbox-input:checked + .checkbox-box svg { opacity: 1; }
+
+.checkbox-input:focus-visible + .checkbox-box {
+  outline: 2px solid #2980b9;
+  outline-offset: 2px;
 }
 
 .form-link {
@@ -281,7 +312,7 @@ body.page-login {
 
 .form-footer {
   font: 400 1.3rem/1.5 'Matangi', sans-serif;
-  color: #a3adba;
+  color: #64748b;
   text-align: center;
   margin: 2.6rem 0 0;
 }
@@ -406,7 +437,7 @@ body.page-dashboard {
 }
 
 .topbar-title { font: 800 2.2rem/1.1 'Matangi', sans-serif; color: #2c3e50; }
-.topbar-date  { font: 400 1.3rem/1 'Matangi', sans-serif; color: #94a3b8; margin-top: 0.3rem; }
+.topbar-date  { font: 400 1.3rem/1 'Matangi', sans-serif; color: #475569; margin-top: 0.3rem; }
 
 .search {
   flex: 1;
@@ -421,7 +452,7 @@ body.page-dashboard {
   padding: 0 1.5rem;
 }
 
-.search span { font: 400 1.4rem/1 'Matangi', sans-serif; color: #94a3b8; }
+.search span { font: 400 1.4rem/1 'Matangi', sans-serif; color: #475569; }
 
 .icon-btn {
   width: 4.4rem; height: 4.4rem;
@@ -445,7 +476,7 @@ body.page-dashboard {
 
 .topbar-user { display: flex; align-items: center; gap: 1.1rem; padding-left: 0.6rem; }
 .topbar-user-name { font: 700 1.4rem/1.2 'Matangi', sans-serif; color: #2c3e50; }
-.topbar-user-role { font: 400 1.2rem/1.2 'Matangi', sans-serif; color: #94a3b8; }
+.topbar-user-role { font: 400 1.2rem/1.2 'Matangi', sans-serif; color: #475569; }
 
 /* Content */
 .content { flex: 1; overflow-y: auto; padding: 2.8rem 3.4rem; }
@@ -494,11 +525,11 @@ body.page-dashboard {
   border-radius: 0.8rem;
 }
 
-.badge.up   { color: #2ecc71; background: #eafaf1; }
-.badge.live { color: #e74c3c; background: #fdeeee; gap: 0.5rem; }
+.badge.up   { color: #166534; background: #eafaf1; }
+.badge.live { color: #b91c1c; background: #fdeeee; gap: 0.5rem; }
 
 .stat-num   { font: 800 3.4rem/1 'Matangi', sans-serif; color: #2c3e50; }
-.stat-label { font: 400 1.4rem/1 'Matangi', sans-serif; color: #94a3b8; margin-top: 0.7rem; }
+.stat-label { font: 400 1.4rem/1 'Matangi', sans-serif; color: #475569; margin-top: 0.7rem; }
 
 /* Two-column layout */
 .two-col {
@@ -545,7 +576,7 @@ body.page-dashboard {
   color: #2c3e50;
 }
 
-.day-header .day-num { font: 400 1.1rem/1 'Matangi', sans-serif; color: #94a3b8; margin-top: 0.4rem; }
+.day-header .day-num { font: 400 1.1rem/1 'Matangi', sans-serif; color: #475569; margin-top: 0.4rem; }
 .day-header.today   { color: #3498db; background: #eaf4fc; border-radius: 0.8rem; padding: 0.4rem 0; }
 .day-header.today .day-num { color: #3498db; }
 
@@ -558,7 +589,7 @@ body.page-dashboard {
 
 .slot { border-radius: 0.8rem; padding: 0.8rem 0.9rem; }
 .slot-name { font: 700 1.2rem/1.2 'Matangi', sans-serif; color: #2c3e50; }
-.slot-sub  { font: 400 1.1rem/1.2 'Matangi', sans-serif; color: #7f8c9a; margin-top: 0.3rem; }
+.slot-sub  { font: 400 1.1rem/1.2 'Matangi', sans-serif; color: #475569; margin-top: 0.3rem; }
 
 .slot.blue   { background: #eaf4fc; border-left: 0.3rem solid #3498db; }
 .slot.green  { background: #eafaf1; border-left: 0.3rem solid #2ecc71; }
@@ -577,7 +608,7 @@ body.page-dashboard {
   color: #2ecc71;
 }
 
-.online-sub { font: 400 1.3rem/1.4 'Matangi', sans-serif; color: #94a3b8; margin-bottom: 1.8rem; }
+.online-sub { font: 400 1.3rem/1.4 'Matangi', sans-serif; color: #475569; margin-bottom: 1.8rem; }
 
 .student-list { display: flex; flex-direction: column; gap: 1.3rem; }
 
@@ -597,9 +628,9 @@ body.page-dashboard {
 .status-dot.orange { background: #f39c12; }
 
 .student-name  { font: 700 1.4rem/1.2 'Matangi', sans-serif; color: #2c3e50; }
-.student-class { font: 400 1.2rem/1.2 'Matangi', sans-serif; color: #94a3b8; }
-.student-time  { font: 600 1.2rem/1 'Matangi', sans-serif; color: #7f8c9a; }
-.student-time.waiting { color: #f39c12; }
+.student-class { font: 400 1.2rem/1.2 'Matangi', sans-serif; color: #475569; }
+.student-time  { font: 600 1.2rem/1 'Matangi', sans-serif; color: #475569; }
+.student-time.waiting { color: #b45309; }
 
 .presence-footer { margin-top: auto; padding-top: 1.8rem; }
 
@@ -608,7 +639,7 @@ body.page-dashboard {
   align-items: center;
   justify-content: space-between;
   font: 600 1.3rem/1 'Matangi', sans-serif;
-  color: #7f8c9a;
+  color: #475569;
   margin-bottom: 0.9rem;
 }
 
@@ -655,9 +686,9 @@ body.page-dashboard {
 .class-icon.orange { background: #fff4e5; color: #e67e22; }
 
 .class-name  { font: 700 1.5rem/1.2 'Matangi', sans-serif; color: #2c3e50; }
-.class-level { font: 400 1.2rem/1.2 'Matangi', sans-serif; color: #94a3b8; }
+.class-level { font: 400 1.2rem/1.2 'Matangi', sans-serif; color: #475569; }
 
-.col-label { font: 400 1.2rem/1 'Matangi', sans-serif; color: #94a3b8; margin-bottom: 0.3rem; }
+.col-label { font: 400 1.2rem/1 'Matangi', sans-serif; color: #475569; margin-bottom: 0.3rem; }
 .col-val   { font: 600 1.4rem/1 'Matangi', sans-serif; color: #2c3e50; }
 
 .badge-live {
@@ -665,7 +696,7 @@ body.page-dashboard {
   align-items: center;
   gap: 0.6rem;
   font: 700 1.2rem/1 'Matangi', sans-serif;
-  color: #e74c3c;
+  color: #b91c1c;
   background: #fdeeef;
   padding: 0.6rem 1.1rem;
   border-radius: 2rem;
@@ -676,7 +707,7 @@ body.page-dashboard {
   align-items: center;
   gap: 0.6rem;
   font: 700 1.2rem/1 'Matangi', sans-serif;
-  color: #f39c12;
+  color: #b45309;
   background: #fff4e5;
   padding: 0.6rem 1.1rem;
   border-radius: 2rem;
